@@ -11,6 +11,7 @@ import {
   Card,
   CardActions,
   CardContent,
+  Grid,
 } from "@material-ui/core";
 import { Box } from "@mui/material";
 import "./ListaCategorias.css";
@@ -45,10 +46,11 @@ function ListaCategorias() {
 
   return (
     <>
+    <Grid xs={12}  className="pd80">
     <Box
             margin="8px"
             display="flex"
-            className="text-decorator-none1"
+            className="text-decorator-none1 "
           >
             <Link to="/cadastrocategorias">
               <Button
@@ -106,6 +108,7 @@ function ListaCategorias() {
           </Card>
         </Box>
       ))}
+      </Grid>
     </>
   );
 }

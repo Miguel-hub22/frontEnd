@@ -50,7 +50,7 @@ function Login() {
         }
     }
     return (
-        <Grid container direction="row" justifyContent="center" alignItems="center">
+        <Grid className="fundo pd80" container direction="row" justifyContent="center" alignItems="center">
             <Grid xs={7} alignItems="center">
                 <Box paddingX={20}>
                     <form onSubmit={onSubmit}>
@@ -64,7 +64,7 @@ function Login() {
                         >
                             Entrar
                         </Typography>
-                        <TextField
+                        <TextField className="borda"
                             value={userLogin.usuario}
                             onChange={(e: ChangeEvent<HTMLInputElement>) => updateModel(e)}
                             id="usuario"
@@ -74,7 +74,7 @@ function Login() {
                             margin="normal"
                             fullWidth
                         />
-                        <TextField
+                        <TextField className="borda"
                             value={userLogin.senha}
                             onChange={(e: ChangeEvent<HTMLInputElement>) => updateModel(e)}
                             id="senha"
@@ -85,7 +85,7 @@ function Login() {
                             type="password"
                             fullWidth
                         />
-                        <Grid container xs={12} justifyContent="space-between">
+                        <Grid  container xs={12} justifyContent="space-between">
                                 <Button
                                     className="botao1"
                                     type="submit"
@@ -102,7 +102,7 @@ function Login() {
                                 </Button>
                         </Grid>
                     </form>
-                    <Box display="flex" justifyContent="center" marginTop={2}>
+                    <Box  display="flex" justifyContent="center" marginTop={2}>
                         <Box marginRight={1}>
                             <Typography variant="subtitle1" gutterBottom align="center">
                                 Ainda não é cadastrado?

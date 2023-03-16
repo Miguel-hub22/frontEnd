@@ -36,3 +36,12 @@
     transform: rotate(360deg);
   }
 }
+
+.fundo{
+  background-color: #E8FCCF;
+
+}
+
+.pd80{
+  padding: 4rem;
+}

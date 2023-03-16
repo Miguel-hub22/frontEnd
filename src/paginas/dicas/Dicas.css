@@ -1,0 +1,18 @@
+
+.card:hover{
+    transform: translateY(-10px); 
+    cursor: pointer;
+    position:relative;
+    top:-4px;box-shadow:0 4px 4px hwb(320 3% 6% / 0.978);
+    transition: all .2s ease-in-out;
+    border-radius: 10px;
+    background-color: hwb(320 3% 6% / 0.978);
+    color: #fff;
+    
+}
+.corf{
+    background-color: #E8FCCF;
+}
+.botao3{
+    display: inline-block !important;
+}

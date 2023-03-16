@@ -11,7 +11,8 @@ function TabProdutos() {
     setValue(newValue);
   }
   return (
-    <>
+    <> 
+      
       <TabContext value={value}>
         <AppBar className="painel" position="static">
           <Tabs centered indicatorColor="secondary" onChange={handleChange}>

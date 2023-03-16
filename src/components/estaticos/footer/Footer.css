@@ -1,8 +1,84 @@
+
+.box1{    
+    background-color: #E8FCCF;
+    color:black !important;
+}
+.box2{
+    background-color: #E8FCCF;
+    color:black !important;
+}
+
+.redes{
+    padding: 10px;
+    font-size: 60px !important;
+    color: black !important;
+}
+.textos{
+    color: black !important;
+}
+
+.redes:hover{
+    position:relative;
+    width: 60px;
+    height: 60px;
+    top:-4px;box-shadow:4px 4px 4px 4px #999;
+    transition: all .2s ease-in-out;
+    border-radius: 10px;
+    background-color: #E8FCCF;
+    color: #fff;
+}
+/* nome e links para os git */
 .nomes{
     margin: 0;
 }
 
 .rodape{
+    display: flex;
+    align-items: center;
     padding-left: 20px;
     padding-bottom: 10px;
+}
+
+.caixa {
+    display: flex;
+    gap: 4rem;
+    background-color: #E8FCCF;
+    justify-content: center;
+    padding-bottom: 12px;
+}
+
+.invisivel {
+    text-indent: -9999px;
+    white-space: nowrap;  
+    color: transparent;
+}
+
+
+a {
+    font-weight: bold;
+    color: #168b55;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #076005;
+}
+
+hr {
+    color: black;
+}
+
+hr {
+    background: radial-gradient(circle, rgb(0, 0, 0) 50%, rgb(0, 0, 0) 1%);
+    border: none;
+    height: 1px;
+    margin: 1px 0;
+    width: 100%;
+    display: block;
+    unicode-bidi: isolate;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+    overflow: hidden;
 }

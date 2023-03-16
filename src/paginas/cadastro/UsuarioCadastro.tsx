@@ -62,7 +62,7 @@ function UsuarioCadastro() {
         }
     }
     return (
-        <Grid container direction="row" justifyContent="center" alignItems="center">
+        <Grid className="fundo pd80" container direction="row" justifyContent="center" alignItems="center">
             <Grid xs={7} alignItems="center">
                 <Box paddingX={20}>
                     <form onSubmit={onSubmit}>
@@ -74,7 +74,7 @@ function UsuarioCadastro() {
                             align="center"
                             className="entrar"
                         >
-                            Crie sua conta
+                            Cadastre-se
                         </Typography>
                         <TextField
                             value={user.nome}

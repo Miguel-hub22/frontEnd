@@ -2,7 +2,6 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import Footer from './components/estaticos/footer/Footer';
-import Navbar from './components/estaticos/navbar/Navbar';
 import Home from './paginas/home/Home';
 import Login from './paginas/login/Login';
 import UsuarioCadastro from './paginas/cadastro/UsuarioCadastro';
@@ -16,13 +15,15 @@ import DeletarCategorias from './components/categorias/deletarCategorias/Deletar
 import ListaProdutos from './components/produtos/listaProdutos/ListaProdutos';
 import CadastroProdutos from './components/produtos/cadastroProdutos/CadastrarProdutos';
 import DeletarProdutos from './components/produtos/deletarProdutos/DeletarProdutos';
+import Dicas from './paginas/dicas/Dicas';
+import MyAppBar from './components/estaticos/navbar/Navbar';
 
 function App() {
   return (
     <Provider store={store}>
       <ToastContainer />
     <Router>
-      <Navbar />
+      <MyAppBar />
       <Routes>
         <Route path='/'element={<Home />}/>
         <Route path='/home'element={<Home />}/>
@@ -36,6 +37,8 @@ function App() {
         <Route path='/cadastroprodutos'element={<CadastroProdutos />}/>
         <Route path='/cadastroprodutos/:id'element={<CadastroProdutos />}/>
         <Route path='/deletarprodutos/:id'element={<DeletarProdutos />}/>
+        <Route path='/dicasplantacao'element={<Dicas />}/>
+        
       </Routes>
         <Footer />
     </Router>
