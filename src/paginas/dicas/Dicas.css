@@ -1,18 +1,60 @@
-
-.card:hover{
-    transform: translateY(-10px); 
-    cursor: pointer;
-    position:relative;
-    top:-4px;box-shadow:0 4px 4px hwb(320 3% 6% / 0.978);
-    transition: all .2s ease-in-out;
-    border-radius: 10px;
-    background-color: hwb(320 3% 6% / 0.978);
-    color: #fff;
-    
+.carddicas:hover{
+    transform: translateY(-7px); 
+    position: relative;
+    top:-4px;
+    box-shadow:0 4px 4px hwb(0 22% 78% / 0.978);
+    transition: all .0s ease-in-out;
+    border-radius: 5px;
+    color: black !important;
+    border: solid 1px black !important;
+}
+.carddicas{
+    margin-left: 5px;
 }
 .corf{
     background-color: #E8FCCF;
+    display: flex;
+}
+.botao3:hover{
+    transform: translateY(0px); 
+    cursor: pointer;
+    position: relative;
+    top:-4px;
+    box-shadow:0 4px 4px hwb(0 22% 78% / 0.978);
+    transition: all .0s ease-in-out;
+    border-radius: 5px;
+    background-color: hwb(141 25% 44% / 0.978) !important;
+    color: black !important;
+    border: solid 1px black !important;
 }
 .botao3{
     display: inline-block !important;
+    text-decoration: none !important;
+    color: black !important;
+    border: solid 1px black !important;
+}
+.imagemDica{
+    width: 19vw;
+    display: block;
+    margin: auto;
+}
+.imgcentro{
+    width: 26.8vw;
+    height: 23vw;
+    margin: 0 2.65vw;
+}
+.imgcentro:hover{
+    transform: translateY(-7px); 
+    position: relative;
+    top:-4px;
+    transition: all .0s ease-in-out;
+    border-radius: 10px;
+}
+.text-decoration{
+    text-decoration: none !important;
+}
+.imgregiao{
+    width: 23vw;
+    display: block;
+    margin: auto
 }

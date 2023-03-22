@@ -6,6 +6,9 @@ import { TokenState } from '../../../store/tokens/TokensReducer';
 import { toast } from 'react-toastify';
 import { buscaId, post, put } from '../../../service/Service';
 import { Container, Typography, TextField, Button } from "@material-ui/core"
+import { Box } from '@mui/material';
+import './CadastroCategorias.css'
+
 
 
 function CadastroCategorias() {
@@ -82,17 +85,22 @@ function CadastroCategorias() {
             navigate('/categorias')
         }
 return (
-    <Container maxWidth="sm" className="topo">
-    <form onSubmit={onSubmit}>
-    <Typography variant="h3" align='center'>
-            {categoria.id != 0 ? 'Edite a Categoria' : 'Cadastre uma Categoria  '}
-    </Typography>
-        <TextField value={categoria.tipo} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedCategorias(e)} id="tipo" label="Tipo" variant="outlined" name="tipo" margin="normal" fullWidth />
-        <Button type="submit" variant="contained" color="primary">
-            Finalizar
-        </Button>
-    </form>
-</Container>
+    <>  
+    <Box className="topo fundo pd80">
+        <Container maxWidth="sm"    >
+        <form onSubmit={onSubmit}>
+        <Typography variant="h3" align='center'>
+                {categoria.id != 0 ? 'Edite a Categoria' : 'Cadastre uma Categoria  '}
+        </Typography>
+            <TextField value={categoria.tipo} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedCategorias(e)} id="tipo" label="Tipo" variant="outlined" name="tipo" margin="normal" fullWidth />
+            <Button type="submit" variant="contained" color="primary" >
+                Finalizar
+            </Button>
+        </form>
+    </Container>
+    </Box>
+
+    </>
 )
 }
 

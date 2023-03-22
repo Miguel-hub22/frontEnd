@@ -46,7 +46,7 @@ function ListaCategorias() {
 
   return (
     <>
-    <Grid xs={12}  className="pd80">
+    <Grid xs={12}  className="fundo pd80">
     <Box
             margin="8px"
             display="flex"

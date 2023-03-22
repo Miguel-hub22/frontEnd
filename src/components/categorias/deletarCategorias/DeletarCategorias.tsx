@@ -60,7 +60,7 @@ function DeletarCategorias() {
     }
 return (
     <>
-    <Box m={2}>
+    <Box m={2} className='pddeletar'>
         <Card variant="outlined">
             <CardContent>
                 <Box justifyContent="center">

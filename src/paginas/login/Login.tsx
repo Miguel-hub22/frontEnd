@@ -50,8 +50,8 @@ function Login() {
         }
     }
     return (
-        <Grid className="fundo pd80" container direction="row" justifyContent="center" alignItems="center">
-            <Grid xs={7} alignItems="center">
+        <Grid className="fundo pd80 imglogin" container direction="row" justifyContent="center" alignItems="center">
+            <Grid xs={7} alignItems="center" className="img2">
                 <Box paddingX={20}>
                     <form onSubmit={onSubmit}>
                         <Typography

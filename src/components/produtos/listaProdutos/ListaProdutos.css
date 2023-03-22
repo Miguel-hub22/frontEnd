@@ -18,8 +18,31 @@
     background-color: #0001209e;
     color: #fff;
 }
-
+.card {
+    margin: 1rem;
+    display: flex;
+}
+.innercard{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 .pd90{
 
     padding: 4rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.Search {
+    width: 20% !important;
+    top: 30px !important;
+    margin-left: 37rem !important;
+    margin-top: 3rem !important;
+}
+.modalP{
+    margin-left: 5rem;
+    margin-top: 5rem;
+}
+.imgproduto{
+    width: 150px;
 }

@@ -20,14 +20,13 @@ function Footer(){
           <h2> Equipe </h2>
           <a href="https://linktr.ee/chrispcruz" target="_blank"> Christian Patrick </a><br />
           <a href="https://linktr.ee/Leonardoassis" target="_blank"> Leonardo Assis </a> <br />
-          <a href="https://beacons.ai/flaviabatista" target="_blank"> Marcelo Azevedo </a> <br />
-                                 
+          <a href="" target="_blank"> Marcelo Azevedo </a> <br />  
           </Typography>                        
   <Grid item xs={2}>
       <Typography>
           <h2 className='invisivel'> - </h2>
-          <a href="https://linktr.ee/NickCavalcante" target="_blank"> Miguel Rodrigues</a><br />
-          <a href="https://beacons.ai/mari_rebecca" target="_blank"> Nick Cavalcante </a> <br />
+          <a href="https://linktr.ee/miguelrsa" target="_blank"> Miguel Rodrigues</a><br />
+          <a href="https://linktr.ee/NickCavalcante" target="_blank"> Nick Cavalcante </a> <br />
           <a href="https://linktr.ee/OtavioMatheus" target="_blank"> Otavio Matheus </a> <br />
       </Typography>
   </Grid>
@@ -42,11 +41,6 @@ function Footer(){
       </Typography>
   </Grid>
   <Grid>
-  <Box mx={1} className="cursor">
-                <Typography>
-                  <h2>Sobre Nós</h2>
-                </Typography>
-              </Box>
   </Grid>
   </Grid >
 

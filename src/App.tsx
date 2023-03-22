@@ -17,6 +17,7 @@ import CadastroProdutos from './components/produtos/cadastroProdutos/CadastrarPr
 import DeletarProdutos from './components/produtos/deletarProdutos/DeletarProdutos';
 import Dicas from './paginas/dicas/Dicas';
 import MyAppBar from './components/estaticos/navbar/Navbar';
+import Colaboradores from './paginas/colaboladores/Colaboradores';
 
 function App() {
   return (
@@ -38,6 +39,7 @@ function App() {
         <Route path='/cadastroprodutos/:id'element={<CadastroProdutos />}/>
         <Route path='/deletarprodutos/:id'element={<DeletarProdutos />}/>
         <Route path='/dicasplantacao'element={<Dicas />}/>
+        <Route path='/colaboradores'element={<Colaboradores />}/>
         
       </Routes>
         <Footer />

@@ -99,7 +99,7 @@ async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
                 'Authorization': token
             }
         })
-        toast.success('Produto atualizado com sucesso',{
+        toast.success('Produto cadastrado com sucesso',{
             theme: "colored"
         });
     }
@@ -117,7 +117,7 @@ return (
             <TextField value={produtos.descricao} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedProdutos(e)} id="descricao" label="Descrição" name="descricao" variant="outlined" margin="normal" fullWidth />
             <TextField value={produtos.dicasPlantacao} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedProdutos(e)} id="dicasPlantacao" label="Dicas de Plantacao" variant="outlined" name="dicasPlantacao" margin="normal" fullWidth />
             <TextField value={produtos.preco} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedProdutos(e)} id="preco" label="Preço" variant="outlined" name="preco" margin="normal" />
-            <TextField value={produtos.embalagem} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedProdutos(e)} id="embalagem" label="Embalagem" variant="outlined" name="embalagem" margin="normal" />
+            <TextField value={produtos.embalagem} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedProdutos(e)} id="embalagem" label="Foto do produto" variant="outlined" name="embalagem" margin="normal" />
             <TextField value={produtos.regiao} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedProdutos(e)} id="regiao" label="Região" variant="outlined" name="regiao" margin="normal" />
             <FormControl >
                 <InputLabel id="demo-simple-select-helper-label">Categorias </InputLabel>

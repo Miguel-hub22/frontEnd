@@ -60,7 +60,14 @@ function Navbar() {
               <Box mx={1} className="cursor">
                 <Link to='/dicasplantacao' className="text-decorator-none1">
                   <Typography className="corDaLetra" variant="h6" color="inherit">
-                    Dicas de pantação
+                    Dicas de Plantação
+                  </Typography>
+                </Link>
+              </Box>
+              <Box mx={1} className="cursor">
+                <Link to='/colaboradores' className="text-decorator-none1">
+                  <Typography className="corDaLetra" variant="h6" color="inherit">
+                    Colaboradores
                   </Typography>
                 </Link>
               </Box>

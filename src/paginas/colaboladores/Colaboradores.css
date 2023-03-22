@@ -1,0 +1,166 @@
+.cardsIntegrantes {
+    width: 100vw;
+    display: flex;
+    align-content: space-around;
+    flex-wrap: wrap;
+}
+
+.separacao {
+    background-color: black;
+    width: 0.4vw;
+    height: 35vh;
+    margin-top: 5rem;
+    border-radius: 30px 30px;
+}
+
+h4 {
+    font-size: 18px;
+    font-family: verdana;
+}
+
+p {
+    font-size: 14px;
+    font-family: verdana;
+}
+
+.tela {
+    width: 100% !important;
+    height: 100% !important;
+    direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #E8FCCF !important;
+    margin-top: 0px !important;
+}
+
+.cards {
+    padding: 1rem;
+}
+
+.icon1 {
+    font-size: 2.8rem !important;
+    color: #0E76A8;
+}
+
+.icon2 {
+    font-size: 2.5rem !important;
+    color: rgb(0, 0, 0);
+}
+
+.cardC {
+    width: 18vw;
+    height: 45vh;
+    background: #168b55 ;
+    border-radius: 10px;
+    text-align: center;
+    transition: all 2s;
+}
+
+.cardC:hover {
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.623);
+    background-color: #168b55; /*cor do fundo do card*/
+}
+
+.cardC .blob {
+    height: 10px;
+    width: 100%;
+    border-radius: 0 0 30px 30px;
+    margin: 2.5rem auto;
+    background-color: black;
+    visibility: visible;
+    transition: all 0.3s;
+}
+
+.cardC:hover .blob {
+    height: 0;
+}
+
+.cardC .imgC {
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    display: flex;
+    margin: 30px auto 10px auto;
+    width: 8vw !important;
+    height: 15vh !important;
+    background-color: #000000;
+    border-radius: 50%;
+    font-size: 11px;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s;
+    border: 4px solid #168b55;
+}
+
+.cardC:hover .imgC {
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: 10px 10px 0 0;
+    margin: 0 auto;
+    background-color: #000000;
+    z-index: 99999;
+    border: none;
+}
+
+
+.cardC h2 {
+    padding: 15px 10px;
+    font-size: 25px;
+    transition: all 0.1s;
+    z-index: -99;
+    line-height: 17px;
+}
+
+.cardC h5 {
+    margin-top: -1rem !important;
+    font-size: 1rem;
+    transition: all 0.1s;
+    z-index: -99;
+    line-height: 17px;
+    font-weight: 0.5rem;
+}
+
+.cardC span {
+    font-size: 18px;
+}
+
+.cardC:hover h2 {
+    opacity: 0;
+    width: 100%;
+    position: absolute;
+    transition: all 0.5s;
+}
+.cardC:hover h5 {
+    opacity: 0;
+    width: 100%;
+    position: absolute;
+    transition: all 0.5s;
+} 
+.cardC>p {
+    opacity: 0;
+    transition: all 0.75s;
+} 
+
+.cardC>p>a {
+    padding: 5px;
+}
+
+.cardC:hover>p {
+    position: relative;
+    bottom: 10px;
+    opacity: 100;
+    transition: all 1s;
+}
+
+.container-let {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.apresentacao-left {
+    margin-top: 5rem;
+    width: 75vw;
+    height: 10vw;
+    margin-right: 2rem;
+    margin-left: 1rem;
+}

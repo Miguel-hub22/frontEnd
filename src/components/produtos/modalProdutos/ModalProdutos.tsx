@@ -55,7 +55,7 @@ const body = (
 
 return (
     <div>
-    <Button variant="outlined" className="btnModal" onClick={handleOpen}>
+    <Button variant="contained" color="primary" className="btnModal" onClick={handleOpen}>
         Novo Produto
     </Button>
     <Modal
