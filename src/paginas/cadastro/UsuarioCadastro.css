@@ -1,5 +1,8 @@
 .imgCadastro{
     background-image: url(https://imgur.com/9IIeYEb.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .img2{
@@ -10,4 +13,7 @@
     -webkit-backdrop-filter: blur( 5px ) !important;
     border-radius: 20px;
     margin-top: 10px;
+}
+.botao5{
+    background-color: #168b55 !important;
 }

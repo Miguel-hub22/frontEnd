@@ -6,13 +6,15 @@ import "./Login.css";
 import UsuarioLogin from "../../models/UsuarioLogin";
 import { login } from "../../service/Service";
 import { useDispatch } from "react-redux";
-import { addToken } from '../../store/tokens/Action';
+import { addId, addToken } from '../../store/tokens/Action';
 import { toast } from 'react-toastify';
 
 function Login() {
     let navigate = useNavigate();
     const [token, setToken] = useState('');
     const dispatch = useDispatch()
+
+    const [isLoading, setIsLoading] = useState(false)
 
     const [userLogin, setUserLogin] = useState<UsuarioLogin>({
         id: 0,
@@ -22,6 +24,15 @@ function Login() {
         senha: "",
         token: "",
     });
+
+    const [respUserLogin, setRespUserLogin] = useState<UsuarioLogin>({
+        id: 0,
+        nome: "",
+        usuario: "",
+        cpf: "",
+        senha: "",
+        token: "",
+      })
 
     function updateModel(e: ChangeEvent<HTMLInputElement>) {
         setUserLogin({
@@ -36,14 +47,24 @@ function Login() {
         }
     }, [token]);
 
+    useEffect(() => {
+        if(respUserLogin.token !== '') {
+          dispatch(addToken(respUserLogin.token))
+          dispatch(addId(respUserLogin.id.toString()))
+          navigate('/home')
+        }
+      }, [respUserLogin.token])
+
     async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
         e.preventDefault();
         try {
-            await login(`/usuarios/logar`, userLogin, setToken);
+            setIsLoading(true)
+            await login(`/usuarios/logar`, userLogin, setRespUserLogin);
             toast.success('Usuário logado com sucesso!',{
                 theme:'colored'
             })
         } catch (error) {
+            setIsLoading(false)
             toast.error('Dados do usuário inconsistentes. Erro ao logar!',{
                 theme:'colored'
         });
@@ -85,21 +106,16 @@ function Login() {
                             type="password"
                             fullWidth
                         />
-                        <Grid  container xs={12} justifyContent="space-between">
+                        <Grid  container xs={12} justifyContent="center">
                                 <Button
                                     className="botao1"
                                     type="submit"
                                     variant="contained"
                                     color="primary"
                                 >
-                                    Logar
+                                {isLoading ? 'Aguarde' : 'Logar'}
                                 </Button>
-                                <Button className="botao2"
-                                    type="submit" 
-                                    variant="contained" 
-                                    color="secondary">
-                                    Cancelar
-                                </Button>
+                                
                         </Grid>
                     </form>
                     <Box  display="flex" justifyContent="center" marginTop={2}>

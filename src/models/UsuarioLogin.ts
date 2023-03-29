@@ -4,7 +4,7 @@ interface UsuarioLogin{
     usuario: string
     cpf: string
     senha: string
-    token?: string | null
+    token: string
 }
 
 export default UsuarioLogin

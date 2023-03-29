@@ -45,3 +45,11 @@
 .pd80{
   padding-top: 4rem;
 }
+.MuiButton-containedSecondary {
+  color: #fff;
+  background-color: #b9b8b6 !important;
+}
+.MuiButton-containedPrimary {
+  color: #fff;
+  background-color: #168b55 !important;
+}

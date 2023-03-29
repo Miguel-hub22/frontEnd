@@ -8,21 +8,27 @@ import {
   Card,
   CardActions,
   CardContent,
-  Grid} from "@material-ui/core";
+  Grid,
+  TextField} from "@material-ui/core";
 import { useSelector } from "react-redux";
 import { TokenState } from "../../../store/tokens/TokensReducer";
 import { toast } from "react-toastify";
 import Produtos from "../../../models/Produtos";
 import { busca } from "../../../service/Service";
-import { TextField } from '@material-ui/core';
 import ModalProdutos from "../modalProdutos/ModalProdutos";
 
 function ListaProdutos() {
+  let navigate = useNavigate();
   const [produtos, setProdutos] = useState<Produtos[]>([]);
-  const token = useSelector<TokenState, TokenState["token"]>(
+
+  const token = useSelector<TokenState, TokenState['token']>(
     (state) => state.token
   );
-  let navigate = useNavigate();
+
+  const userId = useSelector<TokenState, TokenState['id']>(
+    (state) => state.id
+  );
+
 
   async function getPost() {
     await busca("/produtos", setProdutos, {
@@ -61,7 +67,6 @@ function ListaProdutos() {
     }
   });
 
-  const items = []
 
   return (
     <>
@@ -78,17 +83,23 @@ function ListaProdutos() {
   }
   />
   <Grid className="modalP">
-    <ModalProdutos />
+  <Link to="/cadastroprodutos">
+              <Button
+                variant="contained"
+                className="marginLeft"
+                size="small"
+                color="primary"
+              >
+                Cadastrar um novo Produto
+              </Button>
+            </Link>
     </Grid>
     <Box className="pd90" >
       {filteredList.map((produtos) => (
           <Box className="card">
             <Card className="innercard" variant="outlined">
               <CardContent>
-                <Typography color="textSecondary" gutterBottom>
-                  Produtos
-                </Typography>
-                <Typography variant="h5" component="h2">
+                <Typography variant="h5" component="h2" id="nomeprod">
                   <span className="txtnegrito">{produtos.nome}</span>
                 </Typography>
                 <Typography variant="body2" component="p">
@@ -111,11 +122,13 @@ function ListaProdutos() {
                   <span className="txtnegrito">Categoria: </span>
                   {produtos.categorias?.tipo}
                 </Typography>
+                <Grid className="imgproduto1" >
                 <img src={produtos.embalagem} alt="" className="imgproduto"/>
-
+                </Grid>
               </CardContent>
+              {produtos.usuario?.id === +userId ? (
               <CardActions>
-                <Box display="flex" justifyContent="center" mb={1.5}>
+                <Grid container justifyContent="center">
                   <Link
                     to={`/cadastroprodutos/${produtos.id}`}
                     className="text-decorator-none"
@@ -144,9 +157,11 @@ function ListaProdutos() {
                         deletar
                       </Button>
                     </Box>
+                    
                   </Link>
-                </Box>
+                </Grid>
               </CardActions>
+              ):(<><h6 className="msgAutorizacao">Sem autorização para alterar ou excluir o produto</h6></>)}
             </Card>
           </Box>
       ))}

@@ -134,7 +134,7 @@ function UsuarioCadastro() {
                         <Grid container xs={12} justifyContent="space-between">
                             <Link to="/home" className="text-decorator-none1">
                                 <Button
-                                    className="botao2"
+                                    className="botao5"
                                     type="submit"
                                     variant="contained"
                                     color="secondary"

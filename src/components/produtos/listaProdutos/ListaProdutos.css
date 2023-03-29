@@ -11,21 +11,27 @@
 .card:hover{
     transform: translateY(-10px); 
     cursor: pointer;
-    position:relative;
+    position: relative;
     top:-4px;box-shadow:0 4px 4px #999;
     transition: all .2s ease-in-out;
-    border-radius: 10px;
+    /* border-radius: 2rem; */
     background-color: #0001209e;
     color: #fff;
 }
 .card {
     margin: 1rem;
     display: flex;
+    /* border-radius: 2rem; */
+    border: 1px #168b55 solid;
+
+
 }
 .innercard{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    background-color: #ecffe9 !important;
+    width: 100%;
 }
 .pd90{
 
@@ -44,5 +50,24 @@
     margin-top: 5rem;
 }
 .imgproduto{
-    width: 150px;
+    width: 250px;
+    height: 150px;
+    text-align: center;
+    align-items: end;
+}
+.imgproduto1{
+    display: flex;
+    justify-content: center;
+}
+#nomeprod{
+    text-align: center;
+    margin-bottom: 5px;
+}
+.innercard{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.msgAutorizacao{
+    text-align: center;
 }

@@ -9,9 +9,9 @@
 
 }
 .barra{
-    position: fixed !important;
-    width: 100%;
-    background: rgba( 232, 252, 207, 0.2 ) !important;
+position: fixed !important;
+width: 100%;
+background: rgba( 232, 252, 207, 0.2 ) !important;
 box-shadow: 0 8px 32px 0 rgba(40, 135, 31, 0.37) !important;
 backdrop-filter: blur( 16.5px ) !important;
 -webkit-backdrop-filter: blur( 16.5px ) !important;

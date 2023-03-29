@@ -12,7 +12,9 @@
 
 }
 .botao1{
-    background-color: green !important;
+    background-color: #ffae00  !important;
+    display: flex;
+    justify-content: center;
 }
 
 .img{
@@ -21,6 +23,9 @@
 .imglogin{
     width: 100%;
     background-image: url(https://imgur.com/9IIeYEb.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .img2{

@@ -1,3 +1,25 @@
 .painel{
-    background-color: #168b55  !important;
+    color: black !important;
+    font-weight: bold !important;
+
+}
+.painel1{
+position: static !important;
+width: 100%;
+background: rgba( 232, 252, 207, 0.2 ) !important;
+box-shadow: 0 8px 32px 0 rgba(40, 135, 31, 0.37) !important;
+backdrop-filter: blur( 16.5px ) !important;
+-webkit-backdrop-filter: blur( 16.5px ) !important;
+color: black !important;
+}
+.painel2{
+    font-weight: bold !important;
+}
+.projeto{
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+.titulo{
+    font-weight: bold !important;
 }

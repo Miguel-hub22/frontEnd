@@ -87,7 +87,7 @@ function CadastroCategorias() {
 return (
     <>  
     <Box className="topo fundo pd80">
-        <Container maxWidth="sm"    >
+        <Container maxWidth="sm">
         <form onSubmit={onSubmit}>
         <Typography variant="h3" align='center'>
                 {categoria.id != 0 ? 'Edite a Categoria' : 'Cadastre uma Categoria  '}

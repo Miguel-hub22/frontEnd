@@ -1,4 +1,5 @@
 import Categorias from './Categorias';
+import Usuario from './Usuario';
 
 interface Produtos{
     id: number;
@@ -9,6 +10,7 @@ interface Produtos{
     dicasPlantacao: string
     regiao: string
     categorias: Categorias | null
+    usuario?: Usuario | null
 }
 
 export default Produtos

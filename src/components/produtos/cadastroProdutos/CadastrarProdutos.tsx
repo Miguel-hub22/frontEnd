@@ -1,6 +1,6 @@
 import React, { useState, useEffect, ChangeEvent } from 'react'
 import { Container, Typography, TextField, Button, Select, InputLabel, MenuItem, FormControl, FormHelperText, Grid } from '@material-ui/core';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useNavigate, useParams, Link } from 'react-router-dom';
 import { busca, buscaId, post, put } from '../../../service/Service';
 import './CadastrarProdutos.css';
 import Categorias from '../../../models/Categorias';
@@ -8,6 +8,7 @@ import Produtos from '../../../models/Produtos';
 import { useSelector } from 'react-redux';
 import { TokenState } from '../../../store/tokens/TokensReducer';
 import { toast } from 'react-toastify';
+import Usuario from '../../../models/Usuario';
 
 function CadastroProdutos() {
     let navigate = useNavigate();
@@ -16,6 +17,9 @@ function CadastroProdutos() {
     const token = useSelector<TokenState, TokenState['token']>(
     (state)=>state.token
 );
+const userId = useSelector<TokenState, TokenState['id']>(
+    (state) => state.id
+  );
 
 useEffect(() => {
     if (token == "") {
@@ -39,13 +43,22 @@ const [categoria, setCategoria] = useState<Categorias>(
         dicasPlantacao:'',
         regiao:'',
         embalagem: '',
-        categorias: null
+        categorias: null,
+        usuario: null
 })
+const [usuario, setUsuario] = useState<Usuario>({
+    id: +userId,
+    nome: '',
+    usuario: '',
+    senha: '',
+    cpf: ''
+  })
 
 useEffect(() => { 
     setProdutos({
         ...produtos,
-        categorias: categoria
+        categorias: categoria,
+        usuario: usuario
     })
 }, [categoria])
 
@@ -81,6 +94,14 @@ function updatedProdutos(e: ChangeEvent<HTMLInputElement>) {
     })
 }
 
+useEffect(() => {
+    setProdutos({
+      ...produtos,
+      categorias: categoria,
+      usuario: usuario
+    });
+  }, [categoria]);
+
 async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
     e.preventDefault()
 
@@ -112,7 +133,9 @@ function back() {
 return (
     <Container maxWidth="sm" className="topo">
         <form onSubmit={onSubmit}>
-            <Typography variant="h3" color="textSecondary" component="h1" align="center" >Formulário de cadastro produtos</Typography>
+        <Typography variant="h3" align='center'>
+        {produtos.id != 0 ? 'Edite o Produto' : 'Cadastre um Produto  '}
+        </Typography>
             <TextField value={produtos.nome} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedProdutos(e)} id="nome" label="Nome" variant="outlined" name="nome" margin="normal" fullWidth />
             <TextField value={produtos.descricao} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedProdutos(e)} id="descricao" label="Descrição" name="descricao" variant="outlined" margin="normal" fullWidth />
             <TextField value={produtos.dicasPlantacao} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedProdutos(e)} id="dicasPlantacao" label="Dicas de Plantacao" variant="outlined" name="dicasPlantacao" margin="normal" fullWidth />

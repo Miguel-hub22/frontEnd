@@ -17,6 +17,7 @@ import Box from "@mui/material/Box";
 import React, { useState } from "react";
 import { login } from "../../service/Service";
 import "./Dicas.css";
+import Carousel from '../../components/produtos/listaProdutos/Carousel';
 
 function Dicas() {
   //Card Norte
